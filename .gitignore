@@ -8,3 +8,4 @@ config/database.yml
 /tmp/pids/*
 /tmp/sessions/*
 /tmp/sockets/*
+config/initializers/site_keys.rb
