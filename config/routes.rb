@@ -4,12 +4,15 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
 
+  map.resource :user
+  
   map.resources :users, :member => { 
                                     :suspend   => :put,
                                     :unsuspend => :put,
                                     :purge     => :delete 
                                     }
-
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
+  
   map.resource :session
 
   map.resources :name_indices
