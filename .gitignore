@@ -10,3 +10,4 @@ config/database.yml
 /tmp/sessions/*
 /tmp/sockets/*
 config/initializers/site_keys.rb
+db/schema.rb
